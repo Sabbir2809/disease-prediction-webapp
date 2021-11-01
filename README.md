@@ -12,6 +12,7 @@ This is a Web-based Project which Predicts the Diseases of Diabetes, Breast Canc
 
 
 ## Application
+
 - To Remove the Dependencies on the Doctors.
 - To Help out the Poor and Helpless People with the Normal Medical Checkup.
 - To Help People avoid paying huge amount to the Doctors Unnecessarily.
