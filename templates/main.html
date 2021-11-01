@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Prediction Web-App</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'logo1.png') }}" type="image/icon type" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      header {
+        height: 50px;
+      }
+      /* Trick */
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename = 'clinic-medical-solid.svg') }}" alt="" width="30" height="24" >
+         Disease Prediction
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('diabetesPage') }}">Diabetes</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('cancerPage') }}">Breast Cancer</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('heartPage') }}">Heart</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('kidneyPage') }}">Kidney</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('liverPage') }}">Liver</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    
+    <main>
+      <div class="container-fluid" style="margin-bottom: 20px">
+        {% block content %} {% endblock %}
+      </div>
+    </main>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
